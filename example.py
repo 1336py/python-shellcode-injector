@@ -1,7 +1,7 @@
 from injector import Injector
 
 # Simple tkinter window to inject into the process
-tkinter_code = """
+code = """
 import tkinter as tk
 
 window = tk.Tk()
@@ -20,5 +20,4 @@ if __name__ == "__main__":
     process_name = "Notepad.exe"  # Injecting into notepad for this example
     injector = Injector(process_name)
     
-    shellcode = create_tkinter_shellcode()
-    injector.inject(shellcode)
+    injector.inject(code)
